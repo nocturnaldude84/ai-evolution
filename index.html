@@ -13,6 +13,7 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f0f4f8;
+            color: #2D3142;
         }
         .chart-container {
             position: relative;
@@ -32,35 +33,38 @@
             font-weight: 900;
             font-size: 3.5rem;
             line-height: 1;
-            color: #00509D;
+            color: #00A6ED;
         }
         .kpi-label {
             font-weight: 600;
-            color: #7D4F50;
+            color: #7A8B99;
         }
         .flow-arrow {
             font-size: 2rem;
-            color: #FDB44B;
+            color: #FFC400;
             align-self: center;
         }
         .flow-item {
-            border-color: #00C49A;
+            border-color: #00A6ED;
+        }
+        .warning-kpi {
+             color: #F45B69;
         }
     </style>
 </head>
-<body class="text-gray-800">
+<body class="antialiased">
 
     <div class="container mx-auto p-4 md:p-8">
 
         <header class="text-center mb-12">
-            <h1 class="text-4xl md:text-6xl font-black text-[#00509D] mb-2">The AI Behavioral Revolution</h1>
-            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">More than a technological upgrade, the shift from AI as a curiosity to a necessity is fundamentally reshaping how we work, learn, and solve problems.</p>
+            <h1 class="text-4xl md:text-6xl font-black text-[#00A6ED] mb-2">The AI Behavioral Revolution</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">The rapid transition of AI from a technological curiosity to a societal cornerstone is fundamentally reshaping how we work, learn, create, and trust.</p>
         </header>
 
         <main class="space-y-12">
 
             <section id="ecosystem" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
-                <h2 class="text-3xl font-bold text-[#00509D] mb-4 text-center">Unprecedented Adoption, Diverse Ecosystem</h2>
+                <h2 class="text-3xl font-bold text-[#2D3142] mb-4 text-center">Unprecedented Adoption, Diverse Ecosystem</h2>
                 <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">ChatGPT's explosive launch created a new digital ecosystem. While it still dominates, a diverse range of specialized tools has emerged, catering to specific user needs from productivity to research.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div>
@@ -70,15 +74,15 @@
                         </div>
                     </div>
                     <div class="space-y-4">
-                        <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-[#00509D]">
+                        <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-[#00A6ED]">
                             <h4 class="font-bold text-lg">ChatGPT (Generalist)</h4>
                             <p>The versatile market leader for content creation, coding, and creative tasks.</p>
                         </div>
-                        <div class="bg-green-50 p-4 rounded-lg border-l-4 border-[#00C49A]">
+                        <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-[#FFC400]">
                             <h4 class="font-bold text-lg">Gemini (Productivity)</h4>
                             <p>Deeply integrated into software suites, acting as a seamless workflow assistant.</p>
                         </div>
-                        <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-[#FDB44B]">
+                        <div class="bg-gray-100 p-4 rounded-lg border-l-4 border-[#7A8B99]">
                             <h4 class="font-bold text-lg">Perplexity AI (Research)</h4>
                             <p>A specialized answer-engine providing real-time, citation-backed information.</p>
                         </div>
@@ -87,11 +91,15 @@
             </section>
 
             <section id="workplace-transformation" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
-                <h2 class="text-3xl font-bold text-[#00509D] mb-4 text-center">The New Workplace: AI-First & Integrated</h2>
+                <h2 class="text-3xl font-bold text-[#2D3142] mb-4 text-center">The New Workplace: AI-First & Integrated</h2>
                 <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">In the modern workplace, AI has evolved from a supplementary tool to a core operational component. Companies are building AI-first workflows, and professionals are shifting from 'doing' tasks to 'managing' AI-driven outcomes.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="md:col-span-2 text-center">
+                        <p class="kpi">78%</p>
+                        <p class="kpi-label">of companies now use AI in at least one business function</p>
+                    </div>
                     <div>
-                        <h3 class="text-xl font-semibold text-center mb-2">Corporate AI Integration</h3>
+                         <h3 class="text-xl font-semibold text-center mb-2">Corporate AI Integration</h3>
                         <div class="chart-container h-48 md:h-56">
                             <canvas id="workflowAdoptionChart"></canvas>
                         </div>
@@ -102,38 +110,37 @@
                             <canvas id="industryAdoptionChart"></canvas>
                         </div>
                     </div>
-                    <div class="text-center md:col-span-2">
-                        <p class="kpi">55.8%</p>
-                        <p class="kpi-label">Productivity Increase for Software Developers</p>
-                        <p class="mt-2 text-gray-600">AI tools are democratizing expertise, with the most significant gains seen among less experienced developers.</p>
-                    </div>
                 </div>
             </section>
             
-            <section id="behavior-shift" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
-                <h2 class="text-3xl font-bold text-[#00509D] mb-4 text-center">Fundamental Shifts in User Behavior</h2>
-                <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">The rise of AI has created a new cognitive toolkit, changing how we interact with technology. Usage is now habitual, multi-platform, and increasingly sophisticated.</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-                    <div class="bg-gray-50 p-6 rounded-lg text-center h-full">
-                        <h3 class="text-xl font-semibold mb-2">Prompt Engineering</h3>
-                        <p class="text-4xl mb-2">✍️</p>
-                        <p>Users have evolved from asking simple questions to crafting detailed prompts, actively co-creating with AI in a new form of human-computer interaction.</p>
+            <section id="dark-side" class="bg-red-50 border-t-4 border-[#F45B69] rounded-lg shadow-lg p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-[#2D3142] mb-4 text-center">The Dark Side: AI as a Tool for Deception</h2>
+                <p class="text-center text-gray-700 mb-8 max-w-2xl mx-auto">The same power that drives progress also enables sophisticated misuse. The proliferation of hyper-realistic deepfakes presents a severe threat to trust in our digital world.</p>
+                 <div class="text-center mb-8">
+                    <p class="kpi warning-kpi">700%</p>
+                    <p class="kpi-label">Surge in deepfake videos detected online in 2024</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <p class="text-4xl mb-2">🗳️</p>
+                        <h3 class="font-bold text-lg mb-2">Political Disinformation</h3>
+                        <p class="text-sm">Fabricated audio and video of political figures are used to influence elections and erode public trust.</p>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-lg text-center h-full">
-                        <h3 class="text-xl font-semibold mb-2">Multi-Tool Strategy</h3>
-                        <p class="text-4xl mb-2">🛠️</p>
-                        <p><strong>60%</strong> of sophisticated users employ multiple AI tools, choosing the best platform for specific tasks like coding, research, or creative work.</p>
+                     <div class="bg-white p-6 rounded-lg shadow">
+                        <p class="text-4xl mb-2">💰</p>
+                        <h3 class="font-bold text-lg mb-2">Fraud & Impersonation</h3>
+                        <p class="text-sm">Voice-cloning and fake video calls enable criminals to authorize fraudulent transactions and scams.</p>
                     </div>
-                    <div class="bg-gray-50 p-6 rounded-lg text-center h-full">
-                         <h3 class="text-xl font-semibold mb-2">Mobile-First Access</h3>
-                         <p class="text-4xl mb-2">📱</p>
-                        <p>With mobile traffic now nearly even with desktop, AI has become an essential on-the-go tool for daily productivity and learning.</p>
+                     <div class="bg-white p-6 rounded-lg shadow">
+                        <p class="text-4xl mb-2">🚫</p>
+                        <h3 class="font-bold text-lg mb-2">Personal Harm</h3>
+                        <p class="text-sm">An estimated 96% of deepfakes are non-consensual explicit content, causing profound psychological damage.</p>
                     </div>
                 </div>
             </section>
-            
+
             <section id="emerging-frontiers" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
-                <h2 class="text-3xl font-bold text-[#00509D] mb-4 text-center">The Path to Deeper Collaboration</h2>
+                <h2 class="text-3xl font-bold text-[#2D3142] mb-4 text-center">The Path to Deeper Collaboration</h2>
                 <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">The evolution of AI interaction is accelerating. We're moving beyond simple text prompts to a more natural, powerful, and autonomous form of human-AI collaboration.</p>
                 <div class="flex flex-col md:flex-row justify-around items-stretch text-center space-y-4 md:space-y-0 md:space-x-4">
                     <div class="flex-1 p-4 border-2 border-dashed flow-item rounded-lg flex flex-col justify-center">
@@ -154,7 +161,7 @@
             </section>
 
             <section id="future-trajectory" class="bg-white rounded-lg shadow-lg p-6 md:p-8">
-                <h2 class="text-3xl font-bold text-[#00509D] mb-4 text-center">The Future of Information Access</h2>
+                <h2 class="text-3xl font-bold text-[#2D3142] mb-4 text-center">The Future of Information Access</h2>
                 <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">Current trends point towards a future where AI assistants are not just tools, but proactive cognitive partners. The very way we find information is on the cusp of a major transformation, with AI search projected to overtake traditional methods.</p>
                 <div class="w-full">
                     <h3 class="text-xl font-semibold text-center mb-2">AI vs. Traditional Search Volume Projection</h3>
@@ -167,14 +174,14 @@
         </main>
 
         <footer class="text-center mt-12 pt-8 border-t border-gray-300">
-            <h3 class="text-2xl font-bold text-[#00509D] mb-4">Conclusion: An Integrated Cognitive Ecosystem</h3>
-            <p class="text-gray-600 max-w-3xl mx-auto">The behaviors being established today—managing AI, learning alongside it, and solving problems with it—are laying the foundation for a future where the line between human and artificial intelligence is increasingly blurred. We are witnessing the dawn of a new, integrated cognitive ecosystem.</p>
+            <h3 class="text-2xl font-bold text-[#2D3142] mb-4">Integrated Cognitive Ecosystem</h3>
+            <p class="text-gray-600 max-w-3xl mx-auto">The behaviors being established today—managing AI, learning alongside it, and solving problems with it—are laying the foundation for a future where the line between human and artificial intelligence is increasingly blurred. This requires new literacy and ethical vigilance to navigate the opportunities and challenges of our new, integrated cognitive ecosystem.</p>
         </footer>
 
     </div>
 
     <script>
-        const brilliantBlues = ['#00509D', '#00C49A', '#FDB44B', '#FF6B6B', '#7D4F50'];
+        const energeticPlayful = ['#00A6ED', '#FFC400', '#F45B69', '#7A8B99', '#2D3142'];
 
         function wrapLabel(str, maxWidth) {
             if (typeof str !== 'string' || str.length <= maxWidth) {
@@ -219,7 +226,7 @@
                 datasets: [{
                     label: 'Market Share %',
                     data: [60, 13.4, 6.5, 20.1],
-                    backgroundColor: brilliantBlues,
+                    backgroundColor: energeticPlayful,
                     borderColor: '#fff',
                     borderWidth: 2
                 }]
@@ -237,15 +244,15 @@
         });
 
         const industryAdoptionCtx = document.getElementById('industryAdoptionChart').getContext('2d');
-        const rawLabelsIndustry = ['Marketing', 'Education (University)', 'Healthcare (Customer Interest)', 'Insurance'];
+        const rawLabelsIndustry = ['Marketing', 'Healthcare (Customer Interest)', 'Education (University)', 'Insurance'];
         new Chart(industryAdoptionCtx, {
             type: 'bar',
             data: {
                 labels: rawLabelsIndustry.map(label => wrapLabel(label, 16)),
                 datasets: [{
                     label: 'Adoption / Interest (%)',
-                    data: [77, 66, 67, 33],
-                    backgroundColor: brilliantBlues.slice(0, 4),
+                    data: [77, 67, 66, 33],
+                    backgroundColor: energeticPlayful.slice(0, 4),
                 }]
             },
             options: {
@@ -281,17 +288,17 @@
                     {
                         label: 'Multiple Functions',
                         data: [50],
-                        backgroundColor: brilliantBlues[0],
+                        backgroundColor: energeticPlayful[0],
                     },
                     {
                         label: 'At Least One Function',
                         data: [28],
-                        backgroundColor: brilliantBlues[1],
+                        backgroundColor: energeticPlayful[1],
                     },
                      {
                         label: 'Not Using AI',
                         data: [22],
-                        backgroundColor: brilliantBlues[3],
+                        backgroundColor: energeticPlayful[2],
                     }
                 ]
             },
@@ -346,15 +353,15 @@
                 datasets: [{
                     label: 'Traditional Search Volume',
                     data: [100, 98, 95, 85, 70, 50, 40, 30],
-                    borderColor: brilliantBlues[0],
-                    backgroundColor: 'rgba(0, 80, 157, 0.2)',
+                    borderColor: energeticPlayful[3],
+                    backgroundColor: 'rgba(122, 139, 153, 0.2)',
                     fill: true,
                     tension: 0.4
                 }, {
                     label: 'AI-Powered Search Volume',
                     data: [1, 5, 15, 30, 50, 75, 90, 100],
-                    borderColor: brilliantBlues[1],
-                    backgroundColor: 'rgba(0, 196, 154, 0.2)',
+                    borderColor: energeticPlayful[0],
+                    backgroundColor: 'rgba(0, 166, 237, 0.2)',
                     fill: true,
                     tension: 0.4
                 }]
